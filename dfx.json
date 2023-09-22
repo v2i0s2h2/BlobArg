@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "blobArg_backend": {
+      "main": "src/blobArg_backend/main.mo",
+      "type": "motoko"
+    },
+    "blobArg_frontend": {
+      "dependencies": [
+        "blobArg_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/blobArg_frontend/src/index.html"
+      },
+      "source": [
+        "src/blobArg_frontend/assets",
+        "dist/blobArg_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
